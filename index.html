@@ -87,6 +87,7 @@
         const usage = parseFloat(document.getElementById(`usage-${i}`).value);
         const price = parseFloat(document.getElementById(`price-${i}`).value);
 
+
         if (isNaN(quantity) || isNaN(usage) || isNaN(price) || quantity <= 0 || usage <= 0 || price <= 0) {
           alert("Por favor, ingresa valores válidos para todos los ingredientes.");
           return;
@@ -95,8 +96,7 @@
         // Cálculo del número de usos
         const usos = quantity / usage;
         // Cálculo del precio por uso y redondeo a múltiplos de 10 hacia arriba
-        const pricePerUse = Math.ceil(price / usos);
-
+        const pricePerUse = Math.ceil(price / parseInt(usos) / 10) * 10;
         totalCost += pricePerUse;
       }
 
