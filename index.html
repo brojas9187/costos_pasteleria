@@ -95,7 +95,7 @@
         // Cálculo del número de usos
         const usos = quantity / usage;
         // Cálculo del precio por uso y redondeo a múltiplos de 10 hacia arriba
-        const pricePerUse = Math.ceil(price / usos / 10) * 10;
+        const pricePerUse = Math.ceil(price / usos);
 
         totalCost += pricePerUse;
       }
